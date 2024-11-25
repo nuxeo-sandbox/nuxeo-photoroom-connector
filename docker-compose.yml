@@ -1,6 +1,6 @@
 services:
   nuxeo:
-    image: nuxeo-photoroom-connector:2023.0.0-SNAPSHOT
+    image: nuxeo-photoroom-connector:2023.0.0
     ports:
       - "8080:8080"
       - "8787:8787"
