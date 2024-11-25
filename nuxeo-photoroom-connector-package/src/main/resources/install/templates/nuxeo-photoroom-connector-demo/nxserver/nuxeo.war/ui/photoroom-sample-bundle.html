@@ -1,0 +1,13 @@
+<!-- Contribution of element 'nuxeo-operation-button' for slot 'DOCUMENT_ACTIONS' -->
+<nuxeo-slot-content name="removeBackground" slot="DOCUMENT_ACTIONS" order="1">
+    <template>
+        <nuxeo-filter document="[[document]]" type="Picture" permission="ReadWrite" user="[[user]]">
+            <template>
+                <nuxeo-operation-button icon="icons:lightbulb-outline" label="Remove Background"
+                                        operation="javascript.api_remove_background" input="[[document]]"
+                                        notification="Done"
+                                        event="document-updated"></nuxeo-operation-button>
+            </template>
+        </nuxeo-filter>
+    </template>
+</nuxeo-slot-content>

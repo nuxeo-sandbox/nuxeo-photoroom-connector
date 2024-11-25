@@ -1,0 +1,8 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Vendor: org.nuxeo.labs.photoroom
+Bundle-Version: 1.0.0
+Bundle-Name: photoroom-java-client
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: photoroom-java-client;singleton=true

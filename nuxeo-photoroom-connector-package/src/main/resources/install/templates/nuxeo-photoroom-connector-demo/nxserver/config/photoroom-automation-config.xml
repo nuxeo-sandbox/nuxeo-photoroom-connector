@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="org.nuxeo.labs.photoroom.sample.automation" version="1.0.0">
+
+    <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">
+
+        <scriptedOperation id="javascript.api_remove_background">
+            <inputType>document</inputType>
+            <outputType>document</outputType>
+            <category>javascript</category>
+            <description></description>
+            <script>
+                <![CDATA[function run(input, params) {
+
+                      var blob = Picture.GetView(input, {
+                        'viewName': 'FullHD'
+                      });
+
+                      var result = Photoroom.RemoveBackgroundOp(blob, {});
+
+                      input = Document.SetBlob(input, {file:result});
+
+                      input = Document.Save(input, {});
+
+                      return input;
+                    }]]>
+            </script>
+        </scriptedOperation>
+
+    </extension>
+
+</component>

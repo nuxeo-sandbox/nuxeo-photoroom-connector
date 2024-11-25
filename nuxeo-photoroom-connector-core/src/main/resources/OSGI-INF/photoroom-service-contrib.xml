@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.labs.photoroom.service">
+
+  <implementation class="org.nuxeo.labs.photoroom.service.PhotoroomServiceImpl" />
+
+  <service>
+    <provide interface="org.nuxeo.labs.photoroom.service.PhotoroomService" />
+  </service>
+</component>
