@@ -17,6 +17,7 @@
     <nuxeo.target.version>2025.*</nuxeo.target.version>
     <skipDocker>false</skipDocker>
     <okhttp.version>4.12.0</okhttp.version>
+    <pushReleaseChanges>false</pushReleaseChanges>
   </properties>
   <modules>
     <module>photoroom-java-client</module>
@@ -118,7 +119,15 @@
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <scmReleaseCommitComment>Release @{releaseLabel}</scmReleaseCommitComment>
           <scmDevelopmentCommitComment>Post Release @{releaseLabel}</scmDevelopmentCommitComment>
-          <pushChanges>false</pushChanges>
+          <pushChanges>${pushReleaseChanges}</pushChanges>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.18.0</version>
+        <configuration>
+          <ruleSet/>
         </configuration>
       </plugin>
     </plugins>
